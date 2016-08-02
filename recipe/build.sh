@@ -1,7 +1,6 @@
 #!/bin/bash
 
-$PYTHON setup.py install
+export SETUPTOOLS_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=0
+export DISTRIBUTE_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=0
 
-cd $PREFIX/bin
-rm "easy_install-$PY_VER"
-ln -s easy_install "easy_install-$PY_VER"
+$PYTHON setup.py install
