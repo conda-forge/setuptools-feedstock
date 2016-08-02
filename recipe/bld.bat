@@ -1,8 +1,6 @@
-python setup.py install
-if errorlevel 1 exit 1
+set SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
+set SETUPTOOLS_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=0
+set DISTRIBUTE_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=0
 
-rd /s /q %STDLIB_DIR%\lib2to3
-cd %SCRIPTS%
-del *.exe
-del easy_install-2*
-del easy_install-3*
+%PYTHON% setup.py install
+if errorlevel 1 exit 1

@@ -1,4 +1,4 @@
-{% set version = "23.0.0" %}
+{% set version = "25.1.3" %}
 
 package:
   name: setuptools
@@ -7,15 +7,15 @@ package:
 source:
   fn: setuptools-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  md5: 100a90664040f8ff232fbac02a4c5652
+  sha256: 588758f9fb1fdfc55b447bf92e6a920dce38468eeafcea4ee57546eee23d842b
   patches:
-    # modify setuptools to barf if used in conda build (encourage people to add all deps in meta.yaml)
+    # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
     - nodownload.patch
-    # Don't install certifi or wincertstore
+    # Don't install certifi or wincertstore.
     - setup.patch
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - easy_install = setuptools.command.easy_install:main
 
@@ -52,3 +52,4 @@ extra:
   recipe-maintainers:
     - jakirkham
     - msarahan
+    - ocefpaf
