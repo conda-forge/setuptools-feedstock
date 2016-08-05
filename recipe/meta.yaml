@@ -8,9 +8,6 @@ source:
   fn: setuptools-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
   sha256: 94caad360857e3512c476e0f871a87c44794ef537d829c1c82325266c8251705
-  patches:
-    # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
-    - nodownload.patch
 
 build:
   number: 0
