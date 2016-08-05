@@ -2,5 +2,5 @@ set SETUPTOOLS_INSTALL_WINDOWS_SPECIFIC_FILES=0
 set SETUPTOOLS_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=0
 set DISTRIBUTE_DISABLE_VERSIONED_EASY_INSTALL_SCRIPT=0
 
-%PYTHON% setup.py install
+%PYTHON% setup.py install --single-version-externally-managed --record=record.txt
 if errorlevel 1 exit 1
