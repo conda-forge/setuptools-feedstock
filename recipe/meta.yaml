@@ -11,11 +11,9 @@ source:
   patches:
     # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
     - nodownload.patch
-    # Don't install certifi or wincertstore.
-    - setup.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - easy_install = setuptools.command.easy_install:main
 
