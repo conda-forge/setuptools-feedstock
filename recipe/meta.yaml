@@ -1,4 +1,4 @@
-{% set version = "25.1.6" %}
+{% set version = "25.2.0" %}
 
 package:
   name: setuptools
@@ -6,8 +6,8 @@ package:
 
 source:
   fn: setuptools-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  sha256: 281e7d21a3e23d0b7d19992ed52fda5b16a9837654de824ce22ae6b80f0e8f96
+  url: https://github.com/pypa/setuptools/archive/v{{ version }}.tar.gz
+  sha256: d61a878e7eb7bb8594e66e41bbb5fea42c55fc3b4936425c6c3a512f85f7bce2
   patches:
     # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
     - nodownload.patch
@@ -38,6 +38,7 @@ test:
 about:
   home: https://pypi.python.org/pypi/setuptools
   license: MIT
+  license_file: LICENSE
   license_family: MIT
   summary: Download, build, install, upgrade, and uninstall Python packages
   description: |
