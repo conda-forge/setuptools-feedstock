@@ -36,7 +36,7 @@ test:
     - pkg_resources
 
 about:
-  home: https://pypi.python.org/pypi/setuptools
+  home: https://github.com/pypa/setuptools
   license: MIT
   license_file: LICENSE
   license_family: MIT
