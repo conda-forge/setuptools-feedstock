@@ -35,7 +35,6 @@ conda search setuptools --channel conda-forge
 ```
 
 
-
 About conda-forge
 =================
 
