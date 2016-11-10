@@ -1,4 +1,4 @@
-{% set version = "28.7.1" %}
+{% set version = "28.8.0" %}
 
 package:
   name: setuptools
@@ -7,7 +7,7 @@ package:
 source:
   fn: setuptools-{{ version }}.tar.gz
   url: https://github.com/pypa/setuptools/archive/v{{ version }}.tar.gz
-  sha256: ccc969607b8fbb4ca51e6cd11648ccf88d7b60086e7c7e066fac5cf667481c4c
+  sha256: d3b2c63a5cb6816ace0883bc3f6aca9e7890c61d80ac0d608a183f85825a7cc0
   patches:
     # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
     - nodownload.patch
