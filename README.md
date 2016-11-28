@@ -13,6 +13,18 @@ Setuptools is a fully-featured, actively-maintained, and stable library
 designed to facilitate packaging Python projects.
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/setuptools-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/setuptools-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/setuptools-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/setuptools-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/setuptools-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/setuptools-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/setuptools/badges/version.svg)](https://anaconda.org/conda-forge/setuptools)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/setuptools/badges/downloads.svg)](https://anaconda.org/conda-forge/setuptools)
+
 Installing setuptools
 =====================
 
@@ -68,18 +80,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/setuptools-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/setuptools-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/setuptools-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/setuptools-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/setuptools-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/setuptools-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/setuptools/badges/version.svg)](https://anaconda.org/conda-forge/setuptools)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/setuptools/badges/downloads.svg)](https://anaconda.org/conda-forge/setuptools)
 
 
 Updating setuptools-feedstock
