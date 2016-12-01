@@ -13,7 +13,7 @@ source:
     - nodownload.patch
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - easy_install = setuptools.command.easy_install:main
 
