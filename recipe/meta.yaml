@@ -20,11 +20,18 @@ build:
 requirements:
   build:
     - python
+    - appdirs
     - certifi
+    - packaging
+    - six
+    - wget
     - wincertstore  # [win]
   run:
     - python
+    - appdirs
     - certifi
+    - packaging
+    - six
     - wincertstore  # [win]
 
 test:
