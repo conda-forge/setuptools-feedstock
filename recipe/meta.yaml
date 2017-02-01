@@ -24,7 +24,6 @@ requirements:
     - certifi
     - packaging
     - six
-    - wget
     - wincertstore  # [win]
   run:
     - python
