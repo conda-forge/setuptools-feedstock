@@ -1,5 +1,5 @@
 {% set name = "setuptools" %}
-{% set version = "36.3.0" %}
+{% set version = "36.4.0" %}
 
 package:
   name: {{ name|lower }}
