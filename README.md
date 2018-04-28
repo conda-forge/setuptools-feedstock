@@ -16,14 +16,16 @@ designed to facilitate packaging Python projects.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/setuptools-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/setuptools-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/setuptools-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/setuptools-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/setuptools-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/setuptools-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/setuptools-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/setuptools-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/setuptools-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/setuptools-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/setuptools-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/setuptools-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/setuptools/badges/version.svg)](https://anaconda.org/conda-forge/setuptools)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/setuptools/badges/downloads.svg)](https://anaconda.org/conda-forge/setuptools)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-setuptools-green.svg)](https://anaconda.org/conda-forge/setuptools) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/setuptools.svg)](https://anaconda.org/conda-forge/setuptools) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/setuptools.svg)](https://anaconda.org/conda-forge/setuptools) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/setuptools.svg)](https://anaconda.org/conda-forge/setuptools) |
 
 Installing setuptools
 =====================
