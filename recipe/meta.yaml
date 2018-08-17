@@ -1,4 +1,4 @@
-{% set version = "40.0.0" %}
+{% set version = "40.1.0" %}
 
 package:
   name: setuptools
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.zip
-  sha256: 012adb8e25fbfd64c652e99e7bab58799a3aaf05d39ab38561f69190a909015f
+  sha256: 664500268e4d649ce5b9f9dc0af0edc2b144666b1544d64af0453da94aa72b70
   patches:
     # Don't create requires.txt with exact pinnings
     - 0001-Remove-exact-pinning-on-certifi-and-wincertstore.patch
@@ -14,7 +14,7 @@ source:
     - 0002-disable-downloads-inside-conda-build.patch
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - easy_install = setuptools.command.easy_install:main
 
