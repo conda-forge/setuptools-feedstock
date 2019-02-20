@@ -3,13 +3,31 @@
 # -*- mode: yaml -*-
 
 jobs:
-- job: linux_64
+- job: linux
   pool:
     vmImage: ubuntu-16.04
   timeoutInMinutes: 240
   strategy:
     maxParallel: 8
     matrix:
+      linux_aarch64_python2.7:
+        CONFIG: linux_aarch64_python2.7
+        UPLOAD_PACKAGES: True
+      linux_aarch64_python3.6:
+        CONFIG: linux_aarch64_python3.6
+        UPLOAD_PACKAGES: True
+      linux_aarch64_python3.7:
+        CONFIG: linux_aarch64_python3.7
+        UPLOAD_PACKAGES: True
+      linux_ppc64le_python2.7:
+        CONFIG: linux_ppc64le_python2.7
+        UPLOAD_PACKAGES: True
+      linux_ppc64le_python3.6:
+        CONFIG: linux_ppc64le_python3.6
+        UPLOAD_PACKAGES: True
+      linux_ppc64le_python3.7:
+        CONFIG: linux_ppc64le_python3.7
+        UPLOAD_PACKAGES: True
       linux_python2.7:
         CONFIG: linux_python2.7
         UPLOAD_PACKAGES: False
@@ -35,3 +53,5 @@ jobs:
 
   - script: .azure-pipelines/run_docker_build.sh
     displayName: Run docker build
+    env:
+      BINSTAR_TOKEN: $(BINSTAR_TOKEN)
