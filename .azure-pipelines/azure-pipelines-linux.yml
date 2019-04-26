@@ -19,6 +19,9 @@ jobs:
       linux_aarch64_python3.7:
         CONFIG: linux_aarch64_python3.7
         UPLOAD_PACKAGES: True
+      linux_aarch64_python3.8:
+        CONFIG: linux_aarch64_python3.8
+        UPLOAD_PACKAGES: True
       linux_ppc64le_python2.7:
         CONFIG: linux_ppc64le_python2.7
         UPLOAD_PACKAGES: True
@@ -28,6 +31,9 @@ jobs:
       linux_ppc64le_python3.7:
         CONFIG: linux_ppc64le_python3.7
         UPLOAD_PACKAGES: True
+      linux_ppc64le_python3.8:
+        CONFIG: linux_ppc64le_python3.8
+        UPLOAD_PACKAGES: True
       linux_python2.7:
         CONFIG: linux_python2.7
         UPLOAD_PACKAGES: True
@@ -36,6 +42,9 @@ jobs:
         UPLOAD_PACKAGES: True
       linux_python3.7:
         CONFIG: linux_python3.7
+        UPLOAD_PACKAGES: True
+      linux_python3.8:
+        CONFIG: linux_python3.8
         UPLOAD_PACKAGES: True
   steps:
   - script: |
