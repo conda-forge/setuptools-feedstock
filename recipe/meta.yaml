@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.zip
-  sha256: 998a90a43ad3c696e1ffad1b23783e1bd2e6a92e6066959de7c6f0669c154458
+  url: https://github.com/pypa/setuptools/archive/v{{ version }}.tar.gz
+  sha256: 87ea6891958f8eaf93f1034d5aa5459e27167b52886d1d22e8dad66f342c5eed
   patches:
     # Don't create requires.txt with exact pinnings
     - 0001-Remove-exact-pinning-on-certifi-and-wincertstore.patch
@@ -21,11 +21,11 @@ build:
 requirements:
   host:
     - python
-    - certifi  >=2016.09
+    - certifi  >=2016.9.26
     - wincertstore  >=0.2  # [win]
   run:
     - python
-    - certifi  >=2016.09
+    - certifi  >=2016.9.26
     - wincertstore  >=0.2  # [win]
 
 test:
