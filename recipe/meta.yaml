@@ -14,7 +14,8 @@ source:
     - 0002-disable-downloads-inside-conda-build.patch
 
 build:
-  number: 0
+  skip: True  # [py<35]
+  number: 1
   entry_points:
     - easy_install = setuptools.command.easy_install:main
 
