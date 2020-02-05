@@ -15,18 +15,17 @@ source:
 
 build:
   noarch: python
-  skip: True  # [py<35]
   number: 0
   entry_points:
     - easy_install = setuptools.command.easy_install:main
 
 requirements:
   host:
-    - python
+    - python >=3.5
     - certifi  >=2016.9.26
     - wincertstore  >=0.2  # [win]
   run:
-    - python
+    - python >=3.5
     - certifi  >=2016.9.26
     - wincertstore  >=0.2  # [win]
 
