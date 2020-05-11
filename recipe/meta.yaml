@@ -1,4 +1,4 @@
-{% set version = "46.1.3" %}
+{% set version = "46.2.0" %}
 
 package:
   name: setuptools
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pypa/setuptools/archive/v{{ version }}.tar.gz
-  sha256: 984eeb7909fa610a441711c00dc4fa5bbf3c49f9b4b5204b56b7362bdd04f397
+  sha256: 992852c27e1d90ca011940ae5ed8f69eea3c573cc8328b8fa6f14ea40e9636ac
   patches:
     # Don't create requires.txt with exact pinnings
     - 0001-Remove-exact-pinning-on-certifi-and-wincertstore.patch
