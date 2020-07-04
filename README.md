@@ -5,7 +5,7 @@ Home: https://github.com/pypa/setuptools
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Download, build, install, upgrade, and uninstall Python packages
 
