@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/pypa/setuptools/archive/v{{ version }}.tar.gz
-  sha256: 4c71f48957a119694d1a6dddd84006bde53f519d438b8c707b3ffb07564dc2d3
+  sha256: 4c71f48957a119694d1a6dddd84006bde53f519d438b8c707b3ff
   patches:
     # Don't create requires.txt with exact pinnings
     - 0001-Remove-exact-pinning-on-certifi-and-wincertstore.patch
