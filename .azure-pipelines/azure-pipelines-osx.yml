@@ -29,7 +29,6 @@ jobs:
       osx_arm64_python3.9.____cpythontarget_platformosx-arm64:
         CONFIG: osx_arm64_python3.9.____cpythontarget_platformosx-arm64
         UPLOAD_PACKAGES: 'True'
-    maxParallel: 8
   timeoutInMinutes: 360
 
   steps:
