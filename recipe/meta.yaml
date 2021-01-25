@@ -15,9 +15,7 @@ source:
 
 build:
   skip: true  # [py<35]
-  number: 4
-  entry_points:
-    - easy_install = setuptools.command.easy_install:main
+  number: 0
 
 requirements:
   build:
@@ -32,11 +30,8 @@ requirements:
     - wincertstore  >=0.2  # [win]
 
 test:
-  commands:
-    - easy_install --help
   imports:
     - setuptools
-    - easy_install
     - pkg_resources
 
 about:
