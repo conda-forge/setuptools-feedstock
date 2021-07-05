@@ -25,12 +25,8 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
-    - certifi  >=2016.9.26
-    - wincertstore  >=0.2  # [win]
   run:
     - python
-    - certifi  >=2016.9.26
-    - wincertstore  >=0.2  # [win]
 
 test:
   commands:
