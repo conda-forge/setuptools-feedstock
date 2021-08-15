@@ -24,8 +24,6 @@ source:
 
 build:
   number: 0
-  entry_points:
-    - easy_install = setuptools.command.easy_install:main
 
 requirements:
   build:
@@ -37,8 +35,6 @@ requirements:
     - python
 
 test:
-  commands:
-    - easy_install --help
   imports:
     - setuptools
     - pkg_resources
