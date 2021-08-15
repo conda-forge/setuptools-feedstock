@@ -41,7 +41,6 @@ test:
     - easy_install --help
   imports:
     - setuptools
-    - easy_install
     - pkg_resources
 
 about:
