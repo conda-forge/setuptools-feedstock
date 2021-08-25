@@ -1,5 +1,6 @@
 {% set version = "52.0.0" %}
 
+# make sure to set CONDA_D_PIP_AS_PYTHON_DEPENDENCY=0 environ-variable before building ...
 package:
   name: setuptools
   version: {{ version }}
