@@ -1,4 +1,4 @@
-{% set version = "57.4.0" %}
+{% set version = "58.0.2" %}
 
 package:
   name: setuptools
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  sha256: 6bac238ffdf24e8806c61440e755192470352850f3419a52f26ffe0a1a64f465
+  sha256: 19e48d0270a86c996bf09e5282584d3c0adf407f37f0aa6e3c762a349ff41811
   patches:
     # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
     - patches/0002-disable-downloads-inside-conda-build.patch
