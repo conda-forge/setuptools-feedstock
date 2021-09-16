@@ -1,22 +1,30 @@
-{% set version = "52.0.0" %}
+{% set version = "58.0.4" %}
 
-# make sure to set CONDA_D_PIP_AS_PYTHON_DEPENDENCY=0 environ-variable before building ...
+# make sure to set CONDA_ADD_PIP_AS_PYTHON_DEPENDENCY=0 environ-variable before building
 package:
   name: setuptools
   version: {{ version }}
 
 source:
-  url: https://github.com/pypa/setuptools/archive/v{{ version }}.tar.gz
-  sha256: ff0c74d1b905a224d647f99c6135eacbec2620219992186b81aa20012bc7f882
+  url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
+  sha256: f10059f0152e0b7fb6b2edd77bcb1ecd4c9ed7048a826eb2d79f72fd2e6e237b
   patches:
-    # Don't create requires.txt with exact pinnings
-    - 0001-Remove-exact-pinning-on-certifi-and-wincertstore.patch
     # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
-    - 0002-disable-downloads-inside-conda-build.patch
+    - patches/0002-disable-downloads-inside-conda-build.patch
+    # distutils patches from python-feedstock
+    - patches/0019-Use-ranlib-from-env-if-env-variable-is-set.patch
+    - patches/0008-runtime_library_dir_option-Use-1st-word-of-CC-as-com.patch
+    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch
+    - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
+    - patches/0003-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
+    - patches/0010-Add-support-for-_CONDA_PYTHON_SYSCONFIGDATA_NAME-if-.patch  # [py<=39 and python_impl=="cpython"]
+    - patches/0006-Win32-Fixes-for-Windows-GCC-interop-needed-by-RPy2-a.patch
+    - patches/0034-distutils-fix-ldshared.patch
+    # distutils patches from pypy3.6-feedstock
+    - patches/0035-pypy-distutils-scheme.patch   # [win or py>37]
 
 build:
-  skip: true  # [py<35]
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -25,8 +33,11 @@ requirements:
     - python
     - certifi  >=2016.9.26
     - wincertstore  >=0.2  # [win]
+
   run:
     - python
+    # strict dep on certifi/wincertstore was removed in 58 version
+    # as we provided those dependencies in the past in setuptools, keep it for now ...
     - certifi  >=2016.9.26
     - wincertstore  >=0.2  # [win]
 
@@ -51,8 +62,7 @@ about:
 extra:
   recipe-maintainers:
     - jakirkham
-    - jjhelmus
     - msarahan
     - ocefpaf
     - nicoddemus
-    - mingwandroid
+    - isuruf
