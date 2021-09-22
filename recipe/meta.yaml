@@ -12,13 +12,11 @@ source:
     - patches/0002-disable-downloads-inside-conda-build.patch
     # distutils patches from python-feedstock
     - patches/0019-Use-ranlib-from-env-if-env-variable-is-set.patch
-    - patches/0008-runtime_library_dir_option-Use-1st-word-of-CC-as-com.patch
     - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
     - patches/0003-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
     - patches/0010-Add-support-for-_CONDA_PYTHON_SYSCONFIGDATA_NAME-if-.patch  # [py<=39 and python_impl=="cpython"]
     - patches/0006-Win32-Fixes-for-Windows-GCC-interop-needed-by-RPy2-a.patch
-    - patches/0034-distutils-fix-ldshared.patch
     # distutils patches from pypy3.6-feedstock
     - patches/0035-pypy-distutils-scheme.patch   # [win or py>37]
 
