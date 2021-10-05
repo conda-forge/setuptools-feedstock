@@ -17,7 +17,6 @@ source:
     - patches/0003-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
     - patches/0010-Add-support-for-_CONDA_PYTHON_SYSCONFIGDATA_NAME-if-.patch  # [py<=39 and python_impl=="cpython"]
     - patches/0006-Win32-Fixes-for-Windows-GCC-interop-needed-by-RPy2-a.patch
-    - patches/0034-distutils-fix-ldshared.patch
     # distutils patches from pypy3.6-feedstock
     - patches/0035-pypy-distutils-scheme.patch   # [win or py>37]
 
