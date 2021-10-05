@@ -12,7 +12,6 @@ source:
     - patches/0002-disable-downloads-inside-conda-build.patch
     # distutils patches from python-feedstock
     - patches/0019-Use-ranlib-from-env-if-env-variable-is-set.patch
-    - patches/0008-runtime_library_dir_option-Use-1st-word-of-CC-as-com.patch
     - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
     - patches/0003-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
@@ -23,6 +22,7 @@ source:
     - patches/0035-pypy-distutils-scheme.patch   # [win or py>37]
 
 build:
+  skip: True  # [py<36]
   number: 0
 
 requirements:
