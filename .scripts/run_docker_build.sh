@@ -75,12 +75,14 @@ fi
 ( startgroup "Start Docker" ) 2> /dev/null
 
 export UPLOAD_PACKAGES="${UPLOAD_PACKAGES:-True}"
+export IS_PR_BUILD="${IS_PR_BUILD:-False}"
 docker run ${DOCKER_RUN_ARGS} \
            -v "${RECIPE_ROOT}":/home/conda/recipe_root:rw,z,delegated \
            -v "${FEEDSTOCK_ROOT}":/home/conda/feedstock_root:rw,z,delegated \
            -e CONFIG \
            -e HOST_USER_ID \
            -e UPLOAD_PACKAGES \
+           -e IS_PR_BUILD \
            -e GIT_BRANCH \
            -e UPLOAD_ON_BRANCH \
            -e CI \
@@ -88,6 +90,7 @@ docker run ${DOCKER_RUN_ARGS} \
            -e CPU_COUNT \
            -e BUILD_WITH_CONDA_DEBUG \
            -e BUILD_OUTPUT_ID \
+           --pull always \
            -e BINSTAR_TOKEN \
            -e FEEDSTOCK_TOKEN \
            -e STAGING_BINSTAR_TOKEN \
