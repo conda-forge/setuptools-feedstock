@@ -12,7 +12,7 @@ source:
     - patches/0002-disable-downloads-inside-conda-build.patch
     # distutils patches from python-feedstock
     - patches/0019-Use-ranlib-from-env-if-env-variable-is-set.patch
-    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch
+    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=39]
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
     - patches/0003-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
     - patches/0010-Add-support-for-_CONDA_PYTHON_SYSCONFIGDATA_NAME-if-.patch  # [py<=39 and python_impl=="cpython"]
