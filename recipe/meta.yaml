@@ -1,4 +1,4 @@
-{% set version = "58.2.0" %}
+{% set version = "58.3.0" %}
 
 package:
   name: setuptools
@@ -6,13 +6,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  sha256: 2c55bdb85d5bb460bd2e3b12052b677879cffcf46c0c688f2e5bf51d36001145
+  sha256: b0c2461641b58fe30e11d4c3dfba316c513bdf9ec85f9fed0c871c678447205e
   patches:
     # Modify setuptools to fail if used in conda build (encourage people to add all deps in meta.yaml).
     - patches/0002-disable-downloads-inside-conda-build.patch
     # distutils patches from python-feedstock
     - patches/0019-Use-ranlib-from-env-if-env-variable-is-set.patch
-    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch
+    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=39]
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
     - patches/0003-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
     - patches/0010-Add-support-for-_CONDA_PYTHON_SYSCONFIGDATA_NAME-if-.patch  # [py<=39 and python_impl=="cpython"]
@@ -21,7 +21,7 @@ source:
     - patches/0035-pypy-distutils-scheme.patch   # [win or py>37]
 
 build:
-  skip: True  # [py<36]
+  skip: true  # [py<36]
   number: 0
 
 requirements:
