@@ -1,4 +1,4 @@
-{% set version = "59.1.1" %}
+{% set version = "59.2.0" %}
 
 package:
   name: setuptools
@@ -6,12 +6,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  sha256: 94ee891f4759150cded601a6beb6b08400413aefd0267b692f3f8c6e0bb238e7
+  sha256: 157d21de9d055ab9e8ea3186d91e7f4f865e11f42deafa952d90842671fc2576
   patches:
     # distutils patches from python-feedstock
     - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=39]
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
-    - patches/0003-Win32-distutils-Add-support-to-cygwinccompiler-for-V.patch
     - patches/0010-Add-support-for-_CONDA_PYTHON_SYSCONFIGDATA_NAME-if-.patch  # [py<=39 and python_impl=="cpython"]
 
 build:
