@@ -49,10 +49,9 @@ diff --color -Naur setuptools-58.3.0.orig/setuptools/_distutils/unixccompiler.py
              # GNU ld needs an extra option to get a RUNPATH
              # instead of just an RPATH.
 -            return "-Wl,--enable-new-dtags,-R" + dir
--        else:
++            return "-Wl,-R" + dir
+         else:
              return "-Wl,-R" + dir
-+        else:
-+            return "-Wl,--disable-new-dtags,-R" + dir
  
      def library_option(self, lib):
          return "-l" + lib
