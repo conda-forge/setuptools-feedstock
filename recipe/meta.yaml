@@ -46,6 +46,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - rgommers
     - jakirkham
     - msarahan
     - ocefpaf
