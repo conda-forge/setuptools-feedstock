@@ -1,4 +1,4 @@
-{% set version = "61.0.0" %}
+{% set version = "61.1.0" %}
 
 package:
   name: setuptools
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  sha256: 6221e37dc86fcdc9dad9d9eb2002e9f9798fe4aca1bf18f280e66e50c0eb7fca
+  sha256: 63b73d83c4d419d9dd992978cf369af5b6efa06236a4a1397b9bdf3ecadb0453
   patches:
     # distutils patches from python-feedstock
-    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=39]
+    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=37]
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
 
 build:
