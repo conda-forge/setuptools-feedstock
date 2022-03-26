@@ -9,7 +9,7 @@ source:
   sha256: 63b73d83c4d419d9dd992978cf369af5b6efa06236a4a1397b9bdf3ecadb0453
   patches:
     # distutils patches from python-feedstock
-    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=39]
+    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=37]
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
 
 build:
