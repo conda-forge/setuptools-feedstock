@@ -1,4 +1,4 @@
-{% set version = "61.3.0" %}
+{% set version = "61.3.1" %}
 
 package:
   name: setuptools
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  sha256: 425ec0e0014c5bcc1104dd1099de6c8f0584854fc9a4f512575f5ed5ee399fb9
+  sha256: 88fafba4abc2f047e08a188fd4bbc10b0e464592c37b514c19f8f8f88d94450b
   patches:
     # distutils patches from python-feedstock
     - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=37]
