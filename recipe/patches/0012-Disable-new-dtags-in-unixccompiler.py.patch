@@ -1,46 +1,48 @@
-diff --color -Naur setuptools-58.3.0.orig/setuptools/_distutils/tests/test_unixccompiler.py setuptools-58.3.0/setuptools/_distutils/tests/test_unixccompiler.py
---- setuptools-58.3.0.orig/setuptools/_distutils/tests/test_unixccompiler.py	2021-10-22 17:55:51.000000000 -0300
-+++ setuptools-58.3.0/setuptools/_distutils/tests/test_unixccompiler.py	2021-10-26 17:05:45.879757673 -0300
-@@ -138,7 +138,7 @@
-             elif v == 'GNULD':
+diff --git a/setuptools/_distutils/tests/test_unixccompiler.py b/setuptools/_distutils/tests/test_unixccompiler.py
+index 4be4ff2..bb8926d 100644
+--- a/setuptools/_distutils/tests/test_unixccompiler.py
++++ b/setuptools/_distutils/tests/test_unixccompiler.py
+@@ -155,7 +155,7 @@ class UnixCCompilerTestCase(support.TempdirManager, unittest.TestCase):
                  return 'yes'
+
          sysconfig.get_config_var = gcv
--        self.assertEqual(self.cc.rpath_foo(), '-Wl,--enable-new-dtags,-R/foo')
-+        self.assertEqual(self.cc.rpath_foo(), '-Wl,-R/foo')
- 
+-        assert self.cc.rpath_foo() == '-Wl,--enable-new-dtags,-R/foo'
++        assert self.cc.rpath_foo() == '-Wl,-R/foo'
+
          def gcv(v):
              if v == 'CC':
-@@ -146,7 +146,7 @@
-             elif v == 'GNULD':
+@@ -164,7 +164,7 @@ class UnixCCompilerTestCase(support.TempdirManager, unittest.TestCase):
                  return 'yes'
+
          sysconfig.get_config_var = gcv
--        self.assertEqual(self.cc.rpath_foo(), '-Wl,--enable-new-dtags,-R/foo')
-+        self.assertEqual(self.cc.rpath_foo(), '-Wl,-R/foo')
- 
+-        assert self.cc.rpath_foo() == '-Wl,--enable-new-dtags,-R/foo'
++        assert self.cc.rpath_foo() == '-Wl,-R/foo'
+
          # GCC non-GNULD
          sys.platform = 'bar'
-@@ -167,7 +167,7 @@
-             elif v == 'GNULD':
+@@ -189,7 +189,7 @@ class UnixCCompilerTestCase(support.TempdirManager, unittest.TestCase):
                  return 'yes'
+
          sysconfig.get_config_var = gcv
--        self.assertEqual(self.cc.rpath_foo(), '-Wl,--enable-new-dtags,-R/foo')
-+        self.assertEqual(self.cc.rpath_foo(), '-Wl,-R/foo')
- 
+-        assert self.cc.rpath_foo() == '-Wl,--enable-new-dtags,-R/foo'
++        assert self.cc.rpath_foo() == '-Wl,-R/foo'
+
          # non-GCC GNULD
          sys.platform = 'bar'
-@@ -177,7 +177,7 @@
-             elif v == 'GNULD':
+@@ -201,7 +201,7 @@ class UnixCCompilerTestCase(support.TempdirManager, unittest.TestCase):
                  return 'yes'
+
          sysconfig.get_config_var = gcv
--        self.assertEqual(self.cc.rpath_foo(), '-Wl,--enable-new-dtags,-R/foo')
-+        self.assertEqual(self.cc.rpath_foo(), '-Wl,-R/foo')
- 
+-        assert self.cc.rpath_foo() == '-Wl,--enable-new-dtags,-R/foo'
++        assert self.cc.rpath_foo() == '-Wl,-R/foo'
+
          # non-GCC non-GNULD
          sys.platform = 'bar'
-diff --color -Naur setuptools-58.3.0.orig/setuptools/_distutils/unixccompiler.py setuptools-58.3.0/setuptools/_distutils/unixccompiler.py
---- setuptools-58.3.0.orig/setuptools/_distutils/unixccompiler.py	2021-10-22 17:55:51.000000000 -0300
-+++ setuptools-58.3.0/setuptools/_distutils/unixccompiler.py	2021-10-26 17:06:49.258620668 -0300
-@@ -249,12 +249,12 @@
+diff --git a/setuptools/_distutils/unixccompiler.py b/setuptools/_distutils/unixccompiler.py
+index 4ab771a..bc1c584 100644
+--- a/setuptools/_distutils/unixccompiler.py
++++ b/setuptools/_distutils/unixccompiler.py
+@@ -315,10 +315,10 @@ class UnixCCompiler(CCompiler):
          # For all compilers, `-Wl` is the presumed way to
          # pass a compiler option to the linker and `-R` is
          # the way to pass an RPATH.
@@ -52,6 +54,4 @@ diff --color -Naur setuptools-58.3.0.orig/setuptools/_distutils/unixccompiler.py
 +            return "-Wl,-R" + dir
          else:
              return "-Wl,-R" + dir
- 
-     def library_option(self, lib):
-         return "-l" + lib
+
