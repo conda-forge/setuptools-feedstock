@@ -1,23 +1,6 @@
-From fe6e847bbea130ace6ad0b018ea34adc16914f55 Mon Sep 17 00:00:00 2001
-From: Ray Donnelly <mingw.android@gmail.com>
-Date: Sun, 3 Dec 2017 17:31:27 +0000
-Subject: [PATCH 10/30] Add support for _CONDA_PYTHON_SYSCONFIGDATA_NAME if
- _PYTHON_SYSCONFIGDATA_NAME is not set and ignore
- {_CONDA,}_PYTHON_SYSCONFIGDATA_NAME if it does not exist
-
-This is important when bootstrapping a Miniconda (however if you are using
-a Python that pre-dates this change then you will need to apply this patch
-manually).
----
- Lib/distutils/sysconfig.py | 12 +++++++-----
- Lib/sysconfig.py           | 24 ++++++++++++++++--------
- 2 files changed, 23 insertions(+), 13 deletions(-)
-
-diff --git a/setuptools/_distutils/sysconfig.py b/setuptools/_distutils/sysconfig.py
-index 37feae5df7..f56ebe6c3a 100644
---- a/setuptools/_distutils/sysconfig.py
-+++ b/setuptools/_distutils/sysconfig.py
-@@ -439,11 +439,13 @@ def _init_posix():
+--- setuptools-57.4.0.orig/setuptools/_distutils/sysconfig.py	2021-07-18 22:19:45.000000000 -0300
++++ setuptools-57.4.0/setuptools/_distutils/sysconfig.py	2022-08-08 12:35:52.887598676 -0300
+@@ -451,11 +451,13 @@
      """Initialize the module as appropriate for POSIX systems."""
      # _sysconfigdata is generated at build time, see the sysconfig module
      name = os.environ.get('_PYTHON_SYSCONFIGDATA_NAME',
@@ -33,9 +16,6 @@ index 37feae5df7..f56ebe6c3a 100644
 +            multiarch=getattr(sys.implementation, '_multiarch', ''))
 +        )
 +    )
-     _temp = __import__(name, globals(), locals(), ['build_time_vars'], 0)
-     build_time_vars = _temp.build_time_vars
-     global _config_vars
--- 
-2.23.0
-
+     try:
+         _temp = __import__(name, globals(), locals(), ['build_time_vars'], 0)
+     except ImportError:
