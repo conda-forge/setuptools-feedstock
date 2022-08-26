@@ -9,21 +9,17 @@ source:
   sha256: 7732871f4f7fa58fb6bdcaeadb0161b2bd046c85905dbaa066bdcbcc81953b57
   patches:
     # distutils patches from python-feedstock
-    - patches/0012-Disable-new-dtags-in-unixccompiler.py.patch  # [py<=37]
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
 
 build:
-  skip: true  # [py<36]
-  number: 0
+  number: 1
+  noarch: python
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
-    - python
+    - python >=3.8
   run:
-    - python
+    - python >=3.8
 
 test:
   imports:
