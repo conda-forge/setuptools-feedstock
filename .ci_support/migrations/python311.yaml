@@ -1,4 +1,4 @@
-migrator_ts: 1608144114
+migrator_ts: 1666686085
 __migrator:
     migration_number: 1
     operation: key_add
@@ -9,21 +9,25 @@ __migrator:
             - 3.7.* *_cpython
             - 3.8.* *_cpython
             - 3.9.* *_cpython
+            - 3.10.* *_cpython
+            - 3.11.* *_cpython  # new entry
             - 3.6.* *_73_pypy
-            - 3.7.* *_73_pypy  # new entry
+            - 3.7.* *_73_pypy
+            - 3.8.* *_73_pypy
+            - 3.9.* *_73_pypy
     paused: false
     longterm: True
-    pr_limit: 50
+    pr_limit: 5
     exclude:
       # this shouldn't attempt to modify the python feedstocks
       - python
       - pypy3.6
       - pypy-meta
 
-python:                # [not (win or arm64)]
-  - 3.7.* *_73_pypy    # [not (win or arm64)]
+python:
+  - 3.11.* *_cpython
 # additional entries to add for zip_keys
-numpy:                 # [not (win or arm64)]
-  - 1.19               # [not (win or arm64)]
-python_impl:           # [not (win or arm64)]
-  - pypy               # [not (win or arm64)]
+numpy:
+  - 1.23
+python_impl:
+  - cpython
