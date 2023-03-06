@@ -1,11 +1,11 @@
-About setuptools
-================
+About setuptools-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/setuptools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/pypa/setuptools
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/setuptools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Download, build, install, upgrade, and uninstall Python packages
 
