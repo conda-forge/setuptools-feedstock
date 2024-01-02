@@ -157,4 +157,5 @@ Feedstock Maintainers
 * [@nicoddemus](https://github.com/nicoddemus/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 * [@rgommers](https://github.com/rgommers/)
+* [@xhochy](https://github.com/xhochy/)
 
