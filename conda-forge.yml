@@ -1,4 +1,5 @@
 bot:
+  inspection: update-grayskull
   abi_migration_branches:
   - 59_x
 build_platform:
