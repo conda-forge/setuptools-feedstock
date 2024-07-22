@@ -12,7 +12,7 @@ source:
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -20,6 +20,10 @@ requirements:
     - python >=3.8
   run:
     - python >=3.8
+    # jaraco.context needs backports.tarfile, but on Python 3.8 the
+    # _explicit_ namespace package 'backports' breaks the vendored
+    # package discovery for backports.tarfile
+    - backports.tarfile  # [py<39]
 
 test:
   imports:
