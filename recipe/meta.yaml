@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
   sha256: 5c4ccb41111392671f02bb5f8436dfc5a9a7185e80500531b133f5775c4163ef
   patches:
     # distutils patches from python-feedstock
