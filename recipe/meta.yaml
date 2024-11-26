@@ -12,7 +12,7 @@ source:
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
@@ -23,7 +23,11 @@ requirements:
 
 test:
   requires:
-    - python {{ python_min }}
+    # The linter will complain about the missing python_min, but we need
+    # this unpinned to allow setuptools to be used in the downstream tests
+    # of the python-feedstock.
+    # See also https://github.com/conda-forge/conda-forge.github.io/pull/2387
+    - python
   imports:
     - setuptools
     - pkg_resources
