@@ -16,7 +16,6 @@ Documentation: http://pythonhosted.org/setuptools/
 Setuptools is a fully-featured, actively-maintained, and stable library
 designed to facilitate packaging Python projects.
 
-
 Current build status
 ====================
 
