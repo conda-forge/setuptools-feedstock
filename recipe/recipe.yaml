@@ -13,7 +13,7 @@ source:
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 requirements:
