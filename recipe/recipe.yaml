@@ -18,7 +18,7 @@ build:
 
 requirements:
   host:
-    - python ${{ python_min }}
+    - python ${{ python_min }}.*
   run:
     - python >=${{ python_min }}
 
@@ -32,7 +32,7 @@ tests:
       # this unpinned to allow setuptools to be used in the downstream tests
       # of the python-feedstock.
       # See also https://github.com/conda-forge/conda-forge.github.io/pull/2387
-      python_version: python    
+      # python_version: -    
 
 about:
   homepage: https://github.com/pypa/setuptools
