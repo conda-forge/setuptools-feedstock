@@ -1,4 +1,4 @@
-{% set version = "84.0.0" %}
+{% set version = "84.1.0" %}
 
 
 package:
@@ -6,8 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
-  sha256: f4695c21257f0d9b537ec2692c941d02ee143b7cc1276941349a546573b2ef73
+  url: https://files.pythonhosted.org/packages/source/s/setuptools/setuptools-{{ version }}.tar.gz
+  sha256: 23657205b63d4d31395ab917815247f694aafad28cd21316bf5fd45a51048ea0
   patches:
     # distutils patches from python-feedstock
     - patches/0021-Add-d1trimfile-SRC_DIR-to-make-pdbs-more-relocatable.patch
